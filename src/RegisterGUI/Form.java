@@ -1,6 +1,6 @@
 /**
  * @filename: Form.java
- * @author: Chloe Healy - 118720535.
+ * @author: Chloe Healy
  */
 package RegisterGUI;
 
