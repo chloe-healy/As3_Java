@@ -1,12 +1,12 @@
-package RegiterGUI;
+package RegisterGUI;
 
 public class User {
     private final String email;
     private final String password;
 
     /**
-     * Constructor for a user object
      *
+     * Constructor to create a user object
      * @param email    - string representation of a users email
      * @param password - string representation of a users password
      */

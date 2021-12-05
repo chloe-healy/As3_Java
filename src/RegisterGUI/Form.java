@@ -1,4 +1,4 @@
-package RegiterGUI;
+package RegisterGUI;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

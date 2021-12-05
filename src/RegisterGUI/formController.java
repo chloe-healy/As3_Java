@@ -1,4 +1,4 @@
-package RegiterGUI;
+package RegisterGUI;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,10 +16,10 @@ public class formController {
     Button btn;
 
 
-
     public void register(ActionEvent actionEvent) {
         String password = pass.getText();
         String email = emailField.getText();
         User usr = new User(email, password);
     }
+}
 
