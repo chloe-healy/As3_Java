@@ -5,8 +5,8 @@ public class User {
     private final String password;
 
     /**
-     *
      * Constructor to create a user object
+     *
      * @param email    - string representation of a users email
      * @param password - string representation of a users password
      */
@@ -14,5 +14,8 @@ public class User {
     public User(String email, String password) {
         this.email = email;
         this.password = password;
+
+        public boolean verifyEmail (String email){
+        }
     }
 }
