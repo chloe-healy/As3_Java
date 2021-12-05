@@ -66,4 +66,19 @@ public class test {
         assertFalse(usr.verifyNum(testPassword));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"plat9314s", "112x12y", "c"})
+    public void hasLetterTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertTrue(usr.verifyAlpha(testPassword));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"1234567", "7654321", ""})
+    public void noLetterTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertFalse(usr.verifyAlpha(testPassword));
+    }
+
+
 }
