@@ -38,4 +38,18 @@ public class test {
         assertTrue(usr.verifyLength(testPassword));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"hasst/r", "h@@s2at", "hasexclam!"})
+    public void hasSpecialCharTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertTrue(usr.verifySpecial(testPassword));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"hasnost4r", "hasnoaatz1", "hasnoexclam"})
+    public void noSpecialCharTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertFalse(usr.verifySpecial(testPassword));
+    }
+
 }
