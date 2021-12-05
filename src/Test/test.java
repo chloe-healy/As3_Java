@@ -24,4 +24,18 @@ public class test {
         assertTrue(usr.verifyEmail(testEmail));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"", "hello!", "abc12!", "a!2"})
+    public void invalidLengthTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertFalse(usr.verifyLength(testPassword));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"longp@@ss", "abc123!", "c0mputerSc!"})
+    public void validLengthTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertTrue(usr.verifyLength(testPassword));
+    }
+
 }
