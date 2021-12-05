@@ -80,5 +80,19 @@ public class test {
         assertFalse(usr.verifyAlpha(testPassword));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"pqrt!xd8", "!23h567", "p@assw0rdz"})
+    public void validPasswordTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertTrue(usr.verifyPass(testPassword));
+    }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"abcdefg", "1234567", "!!@@!!@"})
+    public void invalidPasswordTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertFalse(usr.verifyPass(testPassword));
+    }
 }
+
+
