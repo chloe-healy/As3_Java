@@ -1,3 +1,8 @@
+/**
+ * @filename: formController.java
+ * @author: Chloe Healy - 118720535.
+ */
+
 package RegisterGUI;
 
 import javafx.event.ActionEvent;
@@ -15,6 +20,10 @@ public class formController {
     @FXML
     Button btn;
 
+    /**
+     * Function which creates button event listener and displays alert on click.
+     * @param actionEvent - button click event
+     */
 
     public void register(ActionEvent actionEvent) {
         String password = pass.getText();

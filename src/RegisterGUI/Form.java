@@ -1,3 +1,7 @@
+/**
+ * @filename: Form.java
+ * @author: Chloe Healy - 118720535.
+ */
 package RegisterGUI;
 
 import javafx.application.Application;
@@ -7,6 +11,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Form extends Application {
+    /**
+     * Class to create a basic GUI window
+     * @param primaryStage representation of GUI
+     * @throws Exception
+     */
 
     @Override
     public void start(Stage primaryStage) throws Exception{
