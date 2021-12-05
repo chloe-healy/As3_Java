@@ -52,4 +52,18 @@ public class test {
         assertFalse(usr.verifySpecial(testPassword));
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"hasnum1", "abc1234", "pass56"})
+    public void hasNumberTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertTrue(usr.verifyNum(testPassword));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"hasnonumone", "abcdefg", "passfive"})
+    public void noNumberTest(String testPassword) {
+        User usr = new User(userEmail, testPassword);
+        assertFalse(usr.verifyNum(testPassword));
+    }
+
 }
